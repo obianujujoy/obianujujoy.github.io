@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name | Cybersecurity Portfolio</title>
+  <title>Obianuju Joy | Cybersecurity & Program Management Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --green: #00ff88;
       --cyan: #00e5ff;
@@ -17,7 +16,6 @@
       --text: #c9d1d9;
       --muted: #6e7681;
     }
-
     body {
       background: var(--bg);
       color: var(--text);
@@ -25,7 +23,6 @@
       font-size: 17px;
       line-height: 1.6;
     }
-
     /* NAV */
     nav {
       position: fixed; top: 0; width: 100%; z-index: 100;
@@ -39,7 +36,6 @@
     nav ul { list-style: none; display: flex; gap: 28px; }
     nav ul a { color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.05em; transition: color 0.2s; }
     nav ul a:hover { color: var(--green); }
-
     /* HERO */
     .hero {
       min-height: 100vh;
@@ -81,7 +77,6 @@
     .btn-primary:hover { background: transparent; color: var(--green); }
     .btn-outline { background: transparent; color: var(--cyan); border: 2px solid var(--cyan); }
     .btn-outline:hover { background: var(--cyan); color: #0a0e1a; }
-
     /* SECTIONS */
     section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
     .section-label {
@@ -92,7 +87,6 @@
     h2 { font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 40px; }
     h2 span { color: var(--green); }
     .divider { height: 1px; background: var(--border); max-width: 1000px; margin: 0 auto; }
-
     /* ABOUT */
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
     .about-grid p { color: var(--text); margin-bottom: 16px; }
@@ -103,7 +97,14 @@
     .stat-item:last-child { margin-bottom: 0; }
     .stat-label { color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
     .stat-value { color: var(--cyan); font-size: 1.1rem; font-weight: 600; margin-top: 4px; }
-
+    /* DUAL ROLE BADGES */
+    .role-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+    .role-badge {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.8rem; padding: 5px 14px; border-radius: 20px; font-weight: 600;
+    }
+    .badge-cyber { background: rgba(0,255,136,0.1); color: var(--green); border: 1px solid var(--green); }
+    .badge-pm { background: rgba(0,229,255,0.1); color: var(--cyan); border: 1px solid var(--cyan); }
     /* EXPERIENCE */
     .timeline { position: relative; padding-left: 28px; }
     .timeline::before {
@@ -125,7 +126,6 @@
     .timeline-desc { color: var(--text); font-size: 0.95rem; }
     .timeline-desc ul { padding-left: 18px; }
     .timeline-desc li { margin-bottom: 6px; }
-
     /* PROJECTS */
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
     .project-card {
@@ -139,6 +139,7 @@
       border-radius: 3px; padding: 2px 8px; margin-bottom: 12px;
       font-family: 'Share Tech Mono', monospace;
     }
+    .project-tag.pm-tag { color: var(--cyan); border-color: var(--cyan); }
     .project-card h3 { color: #fff; font-size: 1.1rem; margin-bottom: 10px; }
     .project-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 16px; }
     .project-tools { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -146,7 +147,6 @@
       font-size: 0.75rem; background: #1e2d3d; color: var(--cyan);
       padding: 3px 10px; border-radius: 20px; font-family: 'Share Tech Mono', monospace;
     }
-
     /* CERTIFICATIONS */
     .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
     .cert-card {
@@ -166,14 +166,12 @@
     .status-progress { background: rgba(0,229,255,0.1); color: var(--cyan); border: 1px solid var(--cyan); }
     .status-done { background: rgba(0,255,136,0.1); color: var(--green); border: 1px solid var(--green); }
     .status-planned { background: rgba(110,118,129,0.1); color: var(--muted); border: 1px solid var(--muted); }
-
     /* SKILLS */
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
     .skill-group { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
     .skill-group h4 { color: var(--cyan); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
     .skill-item { color: var(--text); font-size: 0.9rem; padding: 4px 0; border-bottom: 1px solid var(--border); }
     .skill-item:last-child { border-bottom: none; }
-
     /* CONTACT */
     .contact-box {
       background: var(--card); border: 1px solid var(--border); border-radius: 8px;
@@ -188,7 +186,6 @@
       text-decoration: none; font-weight: 600; transition: all 0.2s;
     }
     .contact-link:hover { border-color: var(--green); color: var(--green); }
-
     /* FOOTER */
     footer {
       text-align: center; padding: 30px 20px;
@@ -196,10 +193,10 @@
       color: var(--muted); font-size: 0.85rem;
       font-family: 'Share Tech Mono', monospace;
     }
-
     @media (max-width: 700px) {
       nav ul { gap: 14px; }
       .about-grid { grid-template-columns: 1fr; }
+      nav { padding: 14px 20px; }
     }
   </style>
 </head>
@@ -207,7 +204,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo">&gt; yourname_sec</div>
+  <div class="logo">&gt; obianuju_joy</div>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -221,12 +218,16 @@
 <!-- HERO -->
 <div class="hero">
   <p class="terminal-tag">$ whoami</p>
-  <h1>Your <span>Name</span></h1>
-  <p class="subtitle">Aspiring Cybersecurity Professional</p>
-  <p>Transitioning into cybersecurity with a background in [Your Previous Field]. Currently pursuing my degree and industry certifications while building hands-on skills through labs and real-world projects.</p>
+  <h1>Obianuju <span>Joy</span></h1>
+  <div class="role-badges">
+    <span class="role-badge badge-cyber">&#x1F512; Cybersecurity</span>
+    <span class="role-badge badge-pm">&#x1F4CB; Program Management</span>
+  </div>
+  <p class="subtitle">Cybersecurity Professional &amp; Program Manager</p>
+  <p>Combining technical security expertise with strong program management skills to deliver secure, well-governed projects. Pursuing certifications and building hands-on skills through labs and real-world initiatives.</p>
   <div class="btn-group">
     <a href="#projects" class="btn btn-primary">View My Work</a>
-    <a href="mailto:you@email.com" class="btn btn-outline">Contact Me</a>
+    <a href="mailto:obianujujoy@email.com" class="btn btn-outline">Contact Me</a>
   </div>
 </div>
 
@@ -236,9 +237,9 @@
   <h2>About <span>Me</span></h2>
   <div class="about-grid">
     <div>
-      <p>I'm a motivated career-changer breaking into the cybersecurity field. With a background in [Previous Career/Field], I bring a unique perspective to security problems — from real-world business risk to technical analysis.</p>
-      <p>Currently enrolled in [Your School/Program], I'm building a strong foundation in networking, ethical hacking, and security operations. I believe security is about people as much as technology.</p>
-      <p>When I'm not studying or doing labs, I'm working through CTF challenges, following threat intelligence news, and contributing to online security communities.</p>
+      <p>I'm a motivated professional working at the intersection of cybersecurity and program management. I bring a unique dual perspective — combining security operations knowledge with the ability to plan, coordinate, and deliver complex programs on time and within scope.</p>
+      <p>I'm building a strong foundation in network security, ethical hacking, and security operations while applying program management frameworks (Agile, PMP principles) to organize and drive security initiatives.</p>
+      <p>When I'm not studying or working through labs, I'm tackling CTF challenges, following threat intelligence news, and developing project planning skills for security programs.</p>
     </div>
     <div class="stat-box">
       <div class="stat-item">
@@ -246,8 +247,12 @@
         <div class="stat-value">Your School / Program Name</div>
       </div>
       <div class="stat-item">
-        <div class="stat-label">Focus Areas</div>
-        <div class="stat-value">Network Security · Ethical Hacking · SOC Analysis</div>
+        <div class="stat-label">Cybersecurity Focus</div>
+        <div class="stat-value">Network Security &middot; Ethical Hacking &middot; SOC Analysis</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Program Mgmt Focus</div>
+        <div class="stat-value">Agile &middot; Risk Management &middot; Stakeholder Coordination</div>
       </div>
       <div class="stat-item">
         <div class="stat-label">Location</div>
@@ -255,11 +260,12 @@
       </div>
       <div class="stat-item">
         <div class="stat-label">Available For</div>
-        <div class="stat-value">Internships · Entry-Level Roles · Freelance</div>
+        <div class="stat-value">Internships &middot; Entry-Level Roles &middot; Freelance</div>
       </div>
     </div>
   </div>
 </section>
+
 <div class="divider"></div>
 
 <!-- EXPERIENCE -->
@@ -267,41 +273,39 @@
   <p class="section-label">// 02. experience</p>
   <h2>Work <span>Experience</span></h2>
   <div class="timeline">
-
     <div class="timeline-item">
-      <div class="timeline-date">JAN 2023 – PRESENT</div>
+      <div class="timeline-date">JAN 2023 &ndash; PRESENT</div>
       <div class="timeline-role">Your Current Job Title</div>
       <div class="timeline-company">Company Name</div>
       <div class="timeline-desc">
         <ul>
           <li>Describe a key responsibility or achievement here</li>
-          <li>Highlight any tech, data, or security-adjacent work you've done</li>
-          <li>Show soft skills: communication, problem-solving, teamwork</li>
+          <li>Highlight any tech, data, security, or program coordination work</li>
+          <li>Show soft skills: communication, problem-solving, stakeholder management</li>
         </ul>
       </div>
     </div>
-
     <div class="timeline-item">
-      <div class="timeline-date">MAR 2020 – DEC 2022</div>
+      <div class="timeline-date">MAR 2020 &ndash; DEC 2022</div>
       <div class="timeline-role">Previous Job Title</div>
       <div class="timeline-company">Previous Company</div>
       <div class="timeline-desc">
         <ul>
           <li>Describe key responsibility here</li>
-          <li>Any tech tools used (Excel, databases, CRM, etc.)</li>
-          <li>Any process improvements or analytical work</li>
+          <li>Any tech tools used (Excel, databases, CRM, project tools, etc.)</li>
+          <li>Any process improvements, budget oversight, or analytical work</li>
         </ul>
       </div>
     </div>
-
   </div>
 </section>
+
 <div class="divider"></div>
 
 <!-- PROJECTS -->
 <section id="projects">
   <p class="section-label">// 03. projects</p>
-  <h2>Cybersecurity <span>Projects</span></h2>
+  <h2>Featured <span>Projects</span></h2>
   <div class="projects-grid">
 
     <div class="project-card">
@@ -318,12 +322,24 @@
     <div class="project-card">
       <span class="project-tag">CTF</span>
       <h3>TryHackMe Learning Path</h3>
-      <p>Completed the Pre-Security and Jr. Penetration Tester paths on TryHackMe, solving challenges in web exploitation, networking, and Linux fundamentals.</p>
+      <p>Completed Pre-Security and Jr. Penetration Tester paths, solving challenges in web exploitation, networking, and Linux fundamentals.</p>
       <div class="project-tools">
         <span class="tool-badge">TryHackMe</span>
         <span class="tool-badge">Burp Suite</span>
         <span class="tool-badge">Nmap</span>
         <span class="tool-badge">Linux</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <span class="project-tag pm-tag">PROGRAM MGMT</span>
+      <h3>Security Awareness Program</h3>
+      <p>Designed and coordinated a mock security awareness training program using Agile sprints, including stakeholder communication plans and risk registers.</p>
+      <div class="project-tools">
+        <span class="tool-badge">Agile</span>
+        <span class="tool-badge">Risk Register</span>
+        <span class="tool-badge">MS Project</span>
+        <span class="tool-badge">Jira</span>
       </div>
     </div>
 
@@ -339,20 +355,9 @@
     </div>
 
     <div class="project-card">
-      <span class="project-tag">SCRIPTING</span>
-      <h3>Python Security Scripts</h3>
-      <p>Wrote Python scripts for basic port scanning, log parsing, and automating repetitive security audit tasks as part of coursework and self-study.</p>
-      <div class="project-tools">
-        <span class="tool-badge">Python</span>
-        <span class="tool-badge">Scapy</span>
-        <span class="tool-badge">Bash</span>
-      </div>
-    </div>
-
-    <div class="project-card">
       <span class="project-tag">SOC</span>
       <h3>SIEM Lab with Splunk</h3>
-      <p>Set up a free Splunk instance to practice ingesting logs, building dashboards, and creating alerts for simulated security events.</p>
+      <p>Set up a Splunk instance to practice ingesting logs, building dashboards, and creating alerts for simulated security events.</p>
       <div class="project-tools">
         <span class="tool-badge">Splunk</span>
         <span class="tool-badge">Log Analysis</span>
@@ -361,28 +366,30 @@
     </div>
 
     <div class="project-card">
-      <span class="project-tag">VULNERABILITY</span>
-      <h3>Vulnerability Scanning Lab</h3>
-      <p>Used Nessus Essentials and OpenVAS to scan intentionally vulnerable VMs (Metasploitable), documenting findings in a professional report format.</p>
+      <span class="project-tag pm-tag">PROGRAM MGMT</span>
+      <h3>IT Project Roadmap</h3>
+      <p>Created a full project roadmap for a simulated IT security upgrade, including WBS, Gantt chart, budget tracking, and executive status reports.</p>
       <div class="project-tools">
-        <span class="tool-badge">Nessus</span>
-        <span class="tool-badge">OpenVAS</span>
-        <span class="tool-badge">Metasploitable</span>
+        <span class="tool-badge">Gantt Chart</span>
+        <span class="tool-badge">WBS</span>
+        <span class="tool-badge">Budget Mgmt</span>
+        <span class="tool-badge">Excel</span>
       </div>
     </div>
 
   </div>
 </section>
+
 <div class="divider"></div>
 
 <!-- CERTIFICATIONS -->
 <section id="certs">
   <p class="section-label">// 04. certifications</p>
-  <h2>Certs & <span>Training</span></h2>
+  <h2>Certs &amp; <span>Training</span></h2>
   <div class="certs-grid">
 
     <div class="cert-card">
-      <div class="cert-icon">🔐</div>
+      <div class="cert-icon">&#x1F512;</div>
       <div>
         <div class="cert-name">CompTIA Security+</div>
         <div class="cert-org">CompTIA</div>
@@ -391,7 +398,7 @@
     </div>
 
     <div class="cert-card">
-      <div class="cert-icon">🌐</div>
+      <div class="cert-icon">&#x1F310;</div>
       <div>
         <div class="cert-name">CompTIA Network+</div>
         <div class="cert-org">CompTIA</div>
@@ -400,7 +407,7 @@
     </div>
 
     <div class="cert-card">
-      <div class="cert-icon">💻</div>
+      <div class="cert-icon">&#x1F4BB;</div>
       <div>
         <div class="cert-name">Google Cybersecurity Certificate</div>
         <div class="cert-org">Google / Coursera</div>
@@ -409,16 +416,16 @@
     </div>
 
     <div class="cert-card">
-      <div class="cert-icon">🎯</div>
+      <div class="cert-icon">&#x1F4CB;</div>
       <div>
-        <div class="cert-name">eJPT (Jr. Pen Tester)</div>
-        <div class="cert-org">INE / eLearnSecurity</div>
-        <span class="cert-status status-planned">Planned</span>
+        <div class="cert-name">PMP / CAPM</div>
+        <div class="cert-org">PMI</div>
+        <span class="cert-status status-progress">In Progress</span>
       </div>
     </div>
 
     <div class="cert-card">
-      <div class="cert-icon">☁️</div>
+      <div class="cert-icon">&#x2601;&#xFE0F;</div>
       <div>
         <div class="cert-name">AWS Cloud Practitioner</div>
         <div class="cert-org">Amazon Web Services</div>
@@ -427,9 +434,9 @@
     </div>
 
     <div class="cert-card">
-      <div class="cert-icon">🛡️</div>
+      <div class="cert-icon">&#x1F3AF;</div>
       <div>
-        <div class="cert-name">TryHackMe – Top 5%</div>
+        <div class="cert-name">TryHackMe &ndash; Top 5%</div>
         <div class="cert-org">TryHackMe</div>
         <span class="cert-status status-progress">In Progress</span>
       </div>
@@ -437,6 +444,7 @@
 
   </div>
 </section>
+
 <div class="divider"></div>
 
 <!-- SKILLS -->
@@ -444,14 +452,16 @@
   <p class="section-label">// 05. skills</p>
   <h2>Technical <span>Skills</span></h2>
   <div class="skills-grid">
+
     <div class="skill-group">
       <h4>Networking</h4>
       <div class="skill-item">TCP/IP Protocols</div>
       <div class="skill-item">DNS / DHCP / HTTP</div>
       <div class="skill-item">Subnetting</div>
-      <div class="skill-item">Firewalls & VPNs</div>
+      <div class="skill-item">Firewalls &amp; VPNs</div>
       <div class="skill-item">Wireshark</div>
     </div>
+
     <div class="skill-group">
       <h4>Security Tools</h4>
       <div class="skill-item">Nmap</div>
@@ -460,6 +470,16 @@
       <div class="skill-item">Nessus Essentials</div>
       <div class="skill-item">Splunk</div>
     </div>
+
+    <div class="skill-group">
+      <h4>Program Management</h4>
+      <div class="skill-item">Agile / Scrum</div>
+      <div class="skill-item">Risk Management</div>
+      <div class="skill-item">Stakeholder Mgmt</div>
+      <div class="skill-item">Jira / Trello</div>
+      <div class="skill-item">MS Project / Excel</div>
+    </div>
+
     <div class="skill-group">
       <h4>Operating Systems</h4>
       <div class="skill-item">Kali Linux</div>
@@ -468,6 +488,7 @@
       <div class="skill-item">Active Directory</div>
       <div class="skill-item">VirtualBox / VMware</div>
     </div>
+
     <div class="skill-group">
       <h4>Programming</h4>
       <div class="skill-item">Python (scripting)</div>
@@ -476,24 +497,19 @@
       <div class="skill-item">HTML / CSS</div>
       <div class="skill-item">SQL (basics)</div>
     </div>
+
     <div class="skill-group">
-      <h4>Concepts</h4>
+      <h4>Frameworks</h4>
+      <div class="skill-item">NIST Framework</div>
       <div class="skill-item">OWASP Top 10</div>
       <div class="skill-item">Incident Response</div>
-      <div class="skill-item">Log Analysis</div>
       <div class="skill-item">Risk Assessment</div>
-      <div class="skill-item">NIST Framework</div>
+      <div class="skill-item">PMI Standards</div>
     </div>
-    <div class="skill-group">
-      <h4>Soft Skills</h4>
-      <div class="skill-item">Problem Solving</div>
-      <div class="skill-item">Technical Writing</div>
-      <div class="skill-item">Team Collaboration</div>
-      <div class="skill-item">Continuous Learning</div>
-      <div class="skill-item">Attention to Detail</div>
-    </div>
+
   </div>
 </section>
+
 <div class="divider"></div>
 
 <!-- CONTACT -->
@@ -501,18 +517,18 @@
   <p class="section-label">// 06. contact</p>
   <h2>Get In <span>Touch</span></h2>
   <div class="contact-box">
-    <p>I'm actively seeking internship and entry-level opportunities in cybersecurity. Whether you want to connect, collaborate, or just talk security — my inbox is open.</p>
+    <p>I'm actively seeking opportunities in cybersecurity and program management. Whether you want to connect, collaborate, or discuss security programs &mdash; my inbox is open.</p>
     <div class="contact-links">
-      <a href="mailto:you@email.com" class="contact-link">📧 Email Me</a>
-      <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">💼 LinkedIn</a>
-      <a href="https://github.com/yourusername" class="contact-link" target="_blank">🐙 GitHub</a>
-      <a href="https://tryhackme.com/p/yourusername" class="contact-link" target="_blank">🎯 TryHackMe</a>
+      <a href="mailto:obianujujoy@email.com" class="contact-link">&#x1F4E7; Email Me</a>
+      <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">&#x1F4BC; LinkedIn</a>
+      <a href="https://github.com/obianujujoy" class="contact-link" target="_blank">&#x1F419; GitHub</a>
+      <a href="https://tryhackme.com/p/yourusername" class="contact-link" target="_blank">&#x1F3AF; TryHackMe</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>// Built by Your Name · Cybersecurity Portfolio · 2025</p>
+  <p>// Built by Obianuju Joy &middot; Cybersecurity &amp; Program Management Portfolio &middot; 2025</p>
 </footer>
 
 </body>
